@@ -1,0 +1,148 @@
+**
+*include, input=geo_bone_shape.inp
+**
+**MATERIALS
+*parameter
+density=1.0e-4
+C10=1.0
+D1=0.00001
+K11=0.610
+K12=0.560
+K21=0.0
+K22=0.000001
+**
+**Damage Model
+**NOTA:DESLIGANDO MAXD DESLIGA-SE DANO
+CD=1.0
+MAXACC=3.0
+MAXD=1.0
+**PERMANENT_SET
+STPCRIT4=1.0
+SHP4=1.0
+BETA=1.0
+PSFLAG=1
+BETA0=1e-5
+TOL=1e-5
+MAXIT=20
+**
+*Material, name=m1
+*USER DEFINED FIELD
+*User Material, constants=16
+<D1>,<C10>,<K11>,<K12>,<K21>,<K22>,<CD>,<MAXACC>
+<MAXD>,<STPCRIT4>,<SHP4>,<BETA>,<PSFLAG>,<TOL>,<MAXIT>,<BETA0>
+*DEPVAR
+22,
+1, JACE, "JACE"
+2, JAC, "JAC"
+3, STRETCH4B, "STRETCH4B"
+4, STRETCH6B, "STRETCH6B"
+5, STP, "STP"
+6, STE4, "STE4"
+7, VD1, "VD(1)"
+8, VD2, "VD(2)"
+9, VD3, "VD(3)"
+10, SEF, "SEF"
+11, ECC, "ECC"
+12, DMG, "DMG"
+13, GDER, "GDER"
+14, PK11, "PK11"
+15, PK12, "PK12"
+16, PK13, "PK12"
+17, PK21, "PK21"
+18, PK22, "PK22"
+19, PK23, "PK23"
+20, PK31, "PK31"
+21, PK32, "PK32"
+21, PK33, "PK33"
+**
+** ----------------------------------------------------------------
+*amplitude, name=amp1
+0,0
+0.2,8
+0.4,4
+0.6,8
+0.8,4
+1,8
+1.2,4
+1.4,8
+1.6,4
+1.8,8
+2,4
+2.2,8
+2.4,4
+2.6,8
+2.8,4
+3,8
+3.2,4
+3.4,8
+3.6,4
+3.8,8
+4,4
+4.2,8
+4.4,4
+4.6,8
+4.8,4
+5,8
+5.2,4
+5.4,8
+5.6,4
+5.8,8
+6,4
+6.2,8
+6.4,4
+6.6,8
+6.8,4
+7,8
+7.2,4
+7.4,8
+7.6,4
+7.8,8
+** STEP: Step-1
+**
+*Step, name=Step-1, nlgeom=YES, inc=10000
+*Static
+0.05, 7.8, 1e-05, 0.05
+**
+** BOUNDARY CONDITIONS
+**
+** Name: disp Type: Displacement/Rotation
+*Boundary, amplitude=amp1
+disp, 2, 2, 1.0
+** Name: symx Type: Symmetry/Antisymmetry/Encastre
+*Boundary
+symx, XSYMM
+** Name: symy Type: Symmetry/Antisymmetry/Encastre
+*Boundary
+symy, YSYMM
+** Name: symz Type: Symmetry/Antisymmetry/Encastre
+*Boundary
+symz, ZSYMM
+**
+** OUTPUT REQUESTS
+**
+*OUTPUT,FIELD,VARIABLE=PRESELECT,FREQ=1
+*ELEMENT OUTPUT, elset=bone_shape
+SDV,COORD
+*OUTPUT,HISTORY,VARIABLE=PRESELECT,FREQ=1
+*End Step
+**
+*Step, name=Step-2, nlgeom=YES, inc=10000
+*Static
+0.05, 0.2, 1e-05, 0.05
+**
+** BOUNDARY CONDITIONS
+**
+** Name: disp Type: Displacement/Rotation
+** Name: symx Type: Symmetry/Antisymmetry/Encastre
+*Boundary, OP=NEW
+symx, XSYMM
+symy, YSYMM
+symz, ZSYMM
+**
+** OUTPUT REQUESTS
+**
+*OUTPUT,FIELD,VARIABLE=PRESELECT,FREQ=1
+*ELEMENT OUTPUT, elset=bone_shape
+SDV,COORD
+*OUTPUT,HISTORY,VARIABLE=PRESELECT,FREQ=1
+*End Step
