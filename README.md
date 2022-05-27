@@ -14,7 +14,7 @@
 
 ## Example 1 - Dog-Bone Specimen under uniaxial cyclic loading
 
-<img src="https://user-images.githubusercontent.com/95075305/170690954-1ded20fc-a29b-4bcd-ab1e-7e04e87e4af0.png" width="150">
+<img src="https://user-images.githubusercontent.com/95075305/170690954-1ded20fc-a29b-4bcd-ab1e-7e04e87e4af0.png" width="400">
 
 
 - Only 1/8 of the specimen was modeled and simetry boundary conditions were applied
@@ -23,7 +23,8 @@
     - unstretch to 1.1
 - In the last cycle, the specimen is allowed to unload without an imposed displacement so that we can see the permanent deformation.
 
-![dog_bone_compressed](https://user-images.githubusercontent.com/95075305/170692921-ea90f6ed-3179-4986-928c-0e1256ceca59.gif)
+
+<img src="https://user-images.githubusercontent.com/95075305/170692921-ea90f6ed-3179-4986-928c-0e1256ceca59.gif" width="900">
 
 
 ## Example 2 - Rectangular Specimen under biaxial cyclic loading
@@ -37,5 +38,6 @@
     - unstretch to 1.1
 - In the last cycle, the specimen is allowed to unload without an imposed displacement so that we can see the permanent deformation.
 
-![biaxial_compressed](https://user-images.githubusercontent.com/95075305/170693682-51428e90-bb29-4f4b-8ccc-d0f7e1b8b01b.gif)
+
+<img src="https://user-images.githubusercontent.com/95075305/170693682-51428e90-bb29-4f4b-8ccc-d0f7e1b8b01b.gif" width="900">
 
