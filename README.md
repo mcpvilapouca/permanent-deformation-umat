@@ -24,7 +24,7 @@
 - In the last cycle, the specimen is allowed to unload without an imposed displacement so that we can see the permanent deformation.
 
 
-<img src="https://user-images.githubusercontent.com/95075305/170692921-ea90f6ed-3179-4986-928c-0e1256ceca59.gif" width="900">
+<img src="https://user-images.githubusercontent.com/95075305/170692921-ea90f6ed-3179-4986-928c-0e1256ceca59.gif" width="300">
 
 
 ## Example 2 - Rectangular Specimen under biaxial cyclic loading
