@@ -8,6 +8,8 @@
 
 🔸 The code is written in FORTRAN and the subroutine can be used with the finite element software ABAQUS. More details regarding the implementation and specific equations can be found in my paper [3].
 
+🔸 There are two examples in each folder, with all the files needed to replicate the results shown below.
+
 ###### [1] Chen, J., Kim, J., Shao, W., Schlecht, S.H., Baek, S.Y., Jones, A.K., Ahn, T., Ashton-Miller, J.A., Banaszak Holl, M.M., Wojtys, E.M., 2019. An anterior cruciate ligament failure mechanism. Am. J. Sports Med. 47, 2067–2076. https://doi.org/10.1177/0363546519854450
 ###### [2] Vila Pouca, M.C.P., Parente, M.P.L., Natal Jorge, R.M., Ashton-Miller, J.A., 2020. Investigating the birth-related caudal maternal pelvic floor muscle injury: the consequences of low cycle fatigue damage. J. Mech. Behav. Biomed. Mater 110, 103956. https://doi.org/10.1016/j.jmbbm.2020.103956.
 ###### [3] Vila Pouca, M. C. P., et al. “Modeling Permanent Deformation during Low-Cycle Fatigue: Application to the Pelvic Floor Muscles during Labor.” Journal of the Mechanics and Physics of Solids, vol. 164, 2022, p. 104908, https://doi.org/10.1016/j.jmps.2022.104908.
