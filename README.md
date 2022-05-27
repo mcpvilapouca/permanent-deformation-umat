@@ -22,7 +22,7 @@
 
 ## Example 2 - Rectangular Specimen under biaxial cyclic loading
 
-![biaxial](https://user-images.githubusercontent.com/95075305/170666953-25190db9-4b38-4aac-8d51-3817d43fc62b.png)
+![biaxial](https://user-images.githubusercontent.com/95075305/170667871-45ab1849-6d4e-41ae-8f3b-467f810b09ff.png)
 
 - Only 1/8 of the specimen was modeled and simetry boundary conditions were applied
 - The specimen was subjected to 20 loading cycles where each cycle consists of:
